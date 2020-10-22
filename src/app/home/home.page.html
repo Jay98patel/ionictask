@@ -1,20 +1,31 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+        <ion-title>
+            Phone Otp Verification
+        </ion-title>
     </ion-toolbar>
-  </ion-header>
+</ion-header>
+<ion-content [fullscreen]="true">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <div class="ion-padding">
+        <form class="ion-padding">
+            <div class="wrap-input">
+                <input class="input" type="number" [(ngModel)]="number" name="user-number" placeholder="Enter Your Mobile Number">
+            </div>
+            <div class="wrap-input">
+                <input class="input" type="number" [(ngModel)]="code" name="verify-code" placeholder="Enter Verification code">
+            </div>
+            <div>
+                <ion-button color="primary" (click)="sendOTP()">Send OTP</ion-button>
+                <ion-button color="success" (click)="verify()">Verify</ion-button>
+            </div>
+        </form>
+    </div>
 </ion-content>
+<ion-footer [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+
+        </ion-title>
+    </ion-toolbar>
+</ion-footer>
